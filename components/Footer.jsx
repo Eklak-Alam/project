@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-black text-white py-8 px-6 border-t border-gray-800">
+    <footer className="w-full text-white py-8 px-6 border-t border-gray-800">
       <div className="max-w-6xl mx-auto flex flex-col gap-6">
         {/* Upper Row - Logo & Social Icons */}
         <div className="flex justify-between items-center">

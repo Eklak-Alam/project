@@ -27,12 +27,12 @@ export const FAQs = () => {
   };
 
   return (
-    <section id="FAQs" className="w-full max-w-3xl mx-auto py-12 px-6 md:px-10 lg:px-14 bg-[#0a0a0a] text-white rounded-xl shadow-2xl border border-gray-800 relative overflow-hidden">
+    <section id="FAQs" className="w-full max-w-3xl mx-auto py-12 px-6 md:px-10 lg:px-14 text-white rounded-xl shadow-2xl border border-gray-800 relative overflow-hidden">
       {/* Background Glow Effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0a0a0a] opacity-30 blur-2xl" />
 
       {/* Heading */}
-      <h2 className="text-2xl text-center mb-10 md:text-3xl font-extrabold bg-gradient-to-r from-gray-900 via-gray-950 to-black text-white px-4 py-2 inline-block rounded-2xl shadow-lg tracking-wide">Frequently Asked Questions</h2>
+      <h2 className="text-2xl text-center mb-10 md:text-3xl font-extrabold bg-gradient-to-r from-black via-gray-900 to-gray-950 text-white px-4 py-2 inline-block rounded-2xl shadow-lg tracking-wide">Frequently Asked Questions</h2>
 
       {/* FAQ Items */}
       <div className="space-y-5 relative z-10">

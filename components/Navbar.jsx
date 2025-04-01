@@ -41,9 +41,19 @@ const Navbar = () => {
     >
       {/* Logo */}
       <a href="#" className="flex items-center font-bold text-lg sm:text-xl md:text-2xl lg:text-lg">
-        <span className="text-orange-500">B2B</span> <span className="text-white">WIZARDS</span>
-      </a>
+      {/* Logo Image */}
+      <img className="h-10 mr-3" src="/1.png" alt="Blix Media Logo" />
 
+      {/* Text with Gradient for "Blix" */}
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-400">
+        Blix
+      </span>
+
+      {/* Text for "Media" */}
+      <span className="text-white ml-1">
+        Media
+      </span>
+    </a>
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
         {links.map((link) => (
@@ -92,7 +102,7 @@ const Navbar = () => {
 
 const ScheduleButton = () => (
   <motion.button
-    className="bg-orange-500 text-white px-3 py-1.5 rounded-full hover:bg-orange-600 transition-colors text-sm sm:text-base font-semibold"
+    className=" bg-gradient-to-r from-red-600 via-red-900 to-red-950 text-white px-3 py-1.5 rounded-full hover:bg-orange-600 transition-colors text-sm sm:text-base font-semibold"
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
   >
