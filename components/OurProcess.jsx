@@ -1,83 +1,160 @@
 "use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 import { FaUsers, FaPencilAlt, FaGlobe, FaChartLine } from "react-icons/fa";
-import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
-import Link from "next/link";
 
 const steps = [
   {
-    title: "Onboarding Call",
-    description:
-      "We dive deep into your business to understand your goals, audience, and challenges to craft a custom game plan.",
-    icon: <FaUsers size={50} className="text-red-600" />,
+    title: "Discovery",
+    description: "We analyze your business needs, target audience, and market position to create a tailored strategy.",
+    icon: <FaUsers className="text-amber-500" />,
   },
   {
-    title: "Strategy and Setup",
-    description:
-      "Within two weeks, we develop your campaign, optimize messaging, and ensure engagement-driven success.",
-    icon: <FaPencilAlt size={50} className="text-red-600" />,
+    title: "Development",
+    description: "Our team builds customized solutions with cutting-edge technology for maximum impact.",
+    icon: <FaPencilAlt className="text-amber-500" />,
   },
   {
-    title: "Campaign Goes Live",
-    description:
-      "After launch, expect results within days. Leads flow into your pipeline, and we refine continuously.",
-    icon: <FaGlobe size={50} className="text-red-600" />,
+    title: "Design",
+    description: "Crafting visually stunning interfaces that engage users and reflect your brand identity.",
+    icon: <FaGlobe className="text-amber-500" />,
   },
   {
-    title: "Improve and Scale",
-    description:
-      "Beyond launch, we analyze data, test strategies, and optimize campaigns for maximum ROI.",
-    icon: <FaChartLine size={50} className="text-red-600" />,
+    title: "Launch",
+    description: "Seamless deployment with continuous monitoring and optimization for peak performance.",
+    icon: <FaChartLine className="text-amber-500" />,
   },
 ];
 
+// Enhanced animation variants with 3D effects
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20, rotateX: -45 },
+  show: { 
+    opacity: 1, 
+    y: 0,
+    rotateX: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
+      duration: 0.8
+    }
+  }
+};
+
 export default function OurProcess() {
   return (
-    <section id="Our Process" className="w-full text-white py-16 px-6">
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-4xl mx-auto text-center"
-      >
-        <h2 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-black via-gray-900 to-gray-950 text-white px-6 py-3 inline-block rounded-xl shadow-xl tracking-wide">
-          Our Process
-        </h2>
-        <p className="text-white mt-3 text-xl lg:text-6xl font-semibold">
-          Streamline Your Success in 4 Steps
-        </p>
-      </motion.div>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-12 max-w-6xl mx-auto">
-        {steps.map((step, index) => (
-          <CardContainer key={index} className="inter-var">
-            <CardBody className="bg-gradient-to-r from-black via-gray-900 to-gray-950 relative group/card dark:hover:shadow-2xl dark:hover:shadow-blue-500/[0.1] dark:bg-gray-900 dark:border-gray-700 border w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+    <section 
+      id="process" 
+      className="min-h-screen w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-bl from-red-900/10 via-black to-black flex items-center"
+      style={{
+        backgroundImage: `
+          radial-gradient(ellipse at top left, rgba(185, 28, 28, 0.15) 0%, transparent 50%),
+          linear-gradient(to bottom left, rgba(127, 29, 29, 0.1) 0%, rgba(0, 0, 0, 1) 70%)
+        `
+      }}
+    >
+      <div className="max-w-7xl mx-auto w-full">
+        {/* Section Header */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          className="text-center mb-16 md:mb-20"
+        >
+          <motion.span 
+            className="text-xs md:text-sm font-medium bg-gray-900 px-4 py-2 rounded-full text-amber-500 tracking-widest inline-block mb-4"
+            variants={itemVariants}
+          >
+            OUR PROCESS
+          </motion.span>
+          <motion.h2
+            className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4"
+            variants={itemVariants}
+          >
+            Where <span className="text-amber-500">Strategy</span> Meets <span className="text-amber-500">Innovation</span>
+          </motion.h2>
+          <motion.p
+            className="mt-3 text-base md:text-lg text-gray-400 max-w-2xl mx-auto"
+            variants={itemVariants}
+          >
+            Proven methodology for digital transformation
+          </motion.p>
+        </motion.div>
+
+        {/* Process Steps */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ 
+                y: -8,
+                rotateX: 5,
+                rotateY: 5,
+                scale: 1.02,
+                boxShadow: "0 20px 25px -5px rgba(245, 158, 11, 0.1), 0 10px 10px -5px rgba(245, 158, 11, 0.04)"
+              }}
+              className="group relative rounded-xl p-6 border border-gray-800/80 hover:border-amber-500/30 transition-all duration-300 bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm h-full"
+              style={{
+                transformStyle: "preserve-3d",
+                perspective: "1000px"
+              }}
+            >
+              {/* Icon with enhanced glow */}
               <motion.div
-                initial={{ y: 0 }}
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="w-12 h-12 flex items-center justify-center rounded-xl mb-4 bg-gradient-to-br from-gray-800 to-gray-900 group-hover:from-amber-500/20 group-hover:to-amber-600/20 transition-all duration-300"
+                whileHover={{ scale: 1.1 }}
               >
-                {step.icon}
+                <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    rotateY: [0, 180, 360],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    repeatType: "loop"
+                  }}
+                  className="text-2xl"
+                >
+                  {step.icon}
+                </motion.div>
               </motion.div>
-              <CardItem translateZ="50" className="text-xl font-bold text-white">
+              
+              {/* Content */}
+              <h3 className="text-lg md:text-xl font-semibold text-white mb-3 group-hover:text-amber-400 transition-colors">
                 {step.title}
-              </CardItem>
-              <CardItem as="p" translateZ="60" className="text-gray-400 text-sm max-w-sm mt-2">
+              </h3>
+              <p className="text-sm md:text-base text-gray-400 leading-relaxed">
                 {step.description}
-              </CardItem>
-              <div className="flex justify-between items-center mt-6">
-                <CardItem translateZ={20} as={Link} href="" className="px-4 py-2 rounded-xl text-xs font-normal text-red-600 hover:text-red-500">
-                  Learn More →
-                </CardItem>
-                <CardItem translateZ={20} as="button" className="cursor-pointer px-4 py-2 rounded-xl bg-gradient-to-r from-red-600 via-red-900 to-red-950 text-white text-xs font-bold">
-                  Get Started
-                </CardItem>
-              </div>
-            </CardBody>
-          </CardContainer>
-        ))}
+              </p>
+
+              {/* Enhanced hover indicator */}
+              <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-amber-500 to-transparent group-hover:w-full transition-all duration-500"></div>
+              
+              {/* 3D effect elements */}
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{
+                  background: "radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.1), transparent 70%)",
+                  transform: "translateZ(-1px)"
+                }}
+              />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
