@@ -45,14 +45,11 @@ export const SubFooter = () => {
             className="max-w-3xl"
           >
             <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
-              Transform your{" "}
+            it's business <span className="text-red-600">Today</span>
               <div className="relative inline-block">
                 <span className="relative">
                   <span className="absolute left-0 top-1/2 h-0.5 w-full transform -translate-y-1/2"></span>
                 </span>
-              </div>{" "}
-              <div className="mt-2">
-                <span className="text-red-500 font-handwriting">BLIX MEDIA</span> today!
               </div>
             </h2>
 

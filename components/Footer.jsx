@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 
 export const Footer = () => {
   const socialLinks = [
-    { icon: FaLinkedin, href: "#", label: "LinkedIn" },
-    { icon: FaFacebook, href: "#", label: "Facebook" },
-    { icon: FaTwitter, href: "#", label: "Twitter" },
-    { icon: FaInstagram, href: "#", label: "Instagram" },
+    { icon: FaLinkedin, href: "/", label: "LinkedIn" },
+    { icon: FaFacebook, href: "/", label: "Facebook" },
+    { icon: FaTwitter, href: "/", label: "Twitter" },
+    { icon: FaInstagram, href: "/", label: "Instagram" },
   ];
 
   const footerLinks = [
@@ -39,7 +39,7 @@ export const Footer = () => {
           >
             <div className="flex items-center gap-3">
               <span className="text-3xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-                B2B <span className="text-transparent bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text">WIZARDS</span>
+                Blix <span className="text-transparent bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text">Media</span>
               </span>
             </div>
             <p className="text-sm text-gray-400 max-w-xs">
@@ -130,7 +130,7 @@ export const Footer = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400"
         >
-          <p>© 2025 B2B Wizards. All rights reserved.</p>
+          <p>© 2025 Blix Media. All rights reserved.</p>
           <div className="flex gap-6">
             {footerLinks.map((link, index) => (
               <motion.a

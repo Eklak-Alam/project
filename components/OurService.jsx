@@ -22,9 +22,9 @@ export const OurServices = () => {
 
   return (
     <section 
+      id="services"
       ref={ref}
       className="w-full min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-bl from-red-900/10 via-black to-black relative overflow-hidden"
-      id="services"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
