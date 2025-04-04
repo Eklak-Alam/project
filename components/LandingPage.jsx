@@ -174,7 +174,7 @@ export default function LandingPage() {
 
           {/* Main Title with Character-by-Character Animation */}
           <motion.h1
-            className="text-[1.6rem] md:text-[3.5rem] lg:text-7xl text-white leading-tight tracking-tight mb-4"
+            className="text-[1.6rem] md:text-[3.3rem] lg:text-7xl text-white leading-tight tracking-tight mb-4"
           >
             {textLines.map((line, lineIndex) => (
               <motion.div 
