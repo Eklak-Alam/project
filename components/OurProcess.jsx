@@ -57,14 +57,22 @@ export default function OurProcess() {
   return (
     <section 
       id="process" 
-      className="min-h-screen w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-bl from-red-900/10 via-black to-black flex items-center"
+      className="min-h-screen w-full py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
       style={{
-        backgroundImage: `
-          radial-gradient(ellipse at top left, rgba(185, 28, 28, 0.15) 0%, transparent 50%),
-          linear-gradient(to bottom left, rgba(127, 29, 29, 0.1) 0%, rgba(0, 0, 0, 1) 70%)
+        background: `
+          radial-gradient(circle at 20% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 80% 80%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 1))
         `
       }}
     >
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
+        <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/20 to-transparent" />
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
+      </div>
+
       <div className="max-w-7xl mx-auto w-full">
         {/* Section Header */}
         <motion.div
@@ -75,16 +83,22 @@ export default function OurProcess() {
           className="text-center mb-16 md:mb-20"
         >
           <motion.span 
-            className="text-xs md:text-sm font-medium bg-gray-900 px-4 py-2 rounded-full text-amber-500 tracking-widest inline-block mb-4"
+            className="text-xs md:text-sm font-medium tracking-widest inline-block mb-4 relative"
             variants={itemVariants}
           >
-            OUR PROCESS
+            <span className="py-2 px-4 relative z-10 bg-gradient-to-r from-amber-500 to-red-500 text-transparent bg-clip-text">
+              OUR PROCESS
+              <span className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-red-500/10 blur-xl rounded-full" />
+              <span className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-white/50 rounded-full" />
+            </span>
+            <span className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-red-500/10 blur-xl rounded-full" />
+            <span className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-red-500/5 rounded-full" />
           </motion.span>
           <motion.h2
             className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4"
             variants={itemVariants}
           >
-            Where <span className="text-amber-500">Strategy</span> Meets <span className="text-amber-500">Innovation</span>
+            Where <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-red-500">Strategy</span> Meets <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-red-500">Innovation</span>
           </motion.h2>
           <motion.p
             className="mt-3 text-base md:text-lg text-gray-400 max-w-2xl mx-auto"

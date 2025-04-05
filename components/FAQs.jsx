@@ -38,11 +38,20 @@ const FAQs = () => {
   };
 
   return (
-    <section id="faq" className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-bl from-red-900/10 via-black to-black relative overflow-hidden">
+    <section id="faq" className="w-full py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      style={{
+        background: `
+          radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 20% 80%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 1))
+        `
+      }}
+    >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
         <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/20 to-transparent" />
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
       </div>
 
       <div className="max-w-4xl mx-auto relative">
@@ -55,16 +64,20 @@ const FAQs = () => {
           className="text-center mb-16"
         >
           <motion.span
-            className="text-xs font-medium bg-gradient-to-r from-amber-500 to-red-500 text-transparent bg-clip-text inline-block mb-4 tracking-widest"
+            className="py-2 px-4 text-xs md:text-sm font-medium tracking-widest inline-block mb-4 relative"
           >
-            FAQs
+            <span className="relative z-10 py-2 px-4 bg-gradient-to-r from-amber-500 to-red-500 text-transparent bg-clip-text">
+              FAQs
+            </span>
+            <span className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-red-500/10 blur-xl rounded-full" />
+            <span className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-white/50 rounded-full" />
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-2xl md:text-3xl font-bold text-white mb-4"
+            className="text-3xl md:text-5xl font-bold text-white mb-4"
           >
             Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-red-500">Questions</span>
           </motion.h2>
@@ -73,7 +86,7 @@ const FAQs = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm text-gray-400 max-w-2xl mx-auto"
+            className="text-sm md:text-base text-gray-400 max-w-2xl mx-auto"
           >
             Find answers to common questions about our services and process
           </motion.p>

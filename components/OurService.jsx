@@ -24,12 +24,20 @@ export const OurServices = () => {
     <section 
       id="services"
       ref={ref}
-      className="w-full min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-bl from-red-900/10 via-black to-black relative overflow-hidden"
+      className="w-full min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      style={{
+        background: `
+          radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 20% 80%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 1))
+        `
+      }}
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
         <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/20 to-transparent" />
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
       </div>
 
       <div className="max-w-7xl mx-auto relative">
@@ -41,18 +49,32 @@ export const OurServices = () => {
           className="text-center mb-20 relative"
         >
           <motion.span
-            className="text-sm font-medium bg-gradient-to-r from-amber-500 to-red-500 text-transparent bg-clip-text inline-block mb-4"
+            className="text-xs md:text-sm font-medium tracking-widest inline-block mb-4 relative"
           >
-            SERVICES
+            <span className="py-2 px-4 relative z-10 bg-gradient-to-r from-amber-500 to-red-500 text-transparent bg-clip-text">
+              SERVICES
+              <span className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-red-500/10 blur-xl rounded-full" />
+              <span className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-white/50 rounded-full" />
+            </span>
+            <span className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-red-500/10 blur-xl rounded-full" />
+            <span className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-red-500/5 rounded-full" />
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-3xl md:text-5xl font-bold text-white mb-6"
           >
             What can we do for <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-red-500">you?</span>
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-sm md:text-base text-gray-400 max-w-2xl mx-auto"
+          >
+            Comprehensive digital solutions tailored to your needs
+          </motion.p>
         </motion.div>
 
         {/* Services Grid */}
