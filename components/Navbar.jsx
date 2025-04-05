@@ -113,16 +113,11 @@ const Navbar = () => {
         >
           <div className="relative">
             <motion.img 
-              className="h-8 mr-2 rounded-full" 
-              src="/newlogo2.png" 
+              className="lg:h-7 lg:w-32 h-5 w-20 mr-2 rounded-full" 
+              src="/logo.png" 
               alt="Logo"
             />
             <div className="absolute inset-0 bg-white/5 rounded-full opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300" />
-          </div>
-          <div className="relative">
-            <span className="text-red-500 relative z-10">Blix</span>
-            <span className="text-white ml-1 relative z-10">Media</span>
-            <div className="absolute -inset-2 bg-white/5 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300" />
           </div>
         </motion.a>
 
