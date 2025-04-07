@@ -12,10 +12,6 @@ const companyLogos = [
   "/twilio.png",
 ];
 
-const textLines = [
-  "Revenue-Generating Outbound",
-  "Systems, Done For You"
-];
 
 // Memoized animation variants
 const containerVariants = {
@@ -174,38 +170,91 @@ export default function LandingPage() {
 
           {/* Main Title with Character-by-Character Animation */}
           <motion.h1
-            className="text-[1.6rem] md:text-[3.3rem] lg:text-7xl text-white leading-tight tracking-tight mb-4"
+          className="text-[1.6rem] md:text-[3.3rem] lg:text-7xl text-white leading-tight tracking-tight mb-4"
+        >
+          {/* Line 1 */}
+          <motion.div
+            className="overflow-hidden"
+            initial="hidden"
+            animate="visible"
+            transition={{
+              staggerChildren: 0.03,
+              delayChildren: 0 * 0.2
+            }}
           >
-            {textLines.map((line, lineIndex) => (
-              <motion.div 
-                key={lineIndex}
-                className="overflow-hidden"
-                initial="hidden"
-                animate="visible"
-                transition={{
-                  staggerChildren: 0.03,
-                  delayChildren: lineIndex * 0.2
+            {"Revenue-Generating Outbound".split("").map((char, charIndex) => (
+              <motion.span
+                key={`line1-${charIndex}`}
+                className="inline-block"
+                variants={letterAnimation}
+                whileHover={{
+                  color: "red",
+                  y: -5,
+                  transition: {
+                    type: "spring",
+                    stiffness: 500
+                  }
                 }}
               >
-                {line.split("").map((char, charIndex) => (
-                  <motion.span
-                    key={charIndex}
-                    className="inline-block"
-                    variants={letterAnimation}
-                    whileHover={{ 
-                      color: lineIndex === 1 ? "#f59e0b" : "red",
-                      y: -5,
-                      transition: { 
-                        type: "spring",
-                        stiffness: 500
-                      }
-                    }}
-                  >
-                    {char === " " ? "\u00A0" : char}
-                  </motion.span>
-                ))}
-              </motion.div>
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
             ))}
+          </motion.div>
+
+          {/* Line 2 */}
+          <motion.div
+            className="overflow-hidden"
+            initial="hidden"
+            animate="visible"
+            transition={{
+              staggerChildren: 0.03,
+              delayChildren: 1 * 0.2
+            }}
+          >
+            {/* "Systems, " stays normal */}
+            {"Systems, ".split("").map((char, charIndex) => (
+              <motion.span
+                key={`line2a-${charIndex}`}
+                className="inline-block"
+                variants={letterAnimation}
+                whileHover={{
+                  color: "#f59e0b",
+                  y: -5,
+                  transition: {
+                    type: "spring",
+                    stiffness: 500
+                  }
+                }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+
+            {/* "Done For You" with different style */}
+            <span
+              className="text-[#e63946] font-bold"
+              style={{ fontFamily: "'Dancing Script', cursive" }}
+            >
+              {"Done For You".split("").map((char, charIndex) => (
+                <motion.span
+                  key={`line2b-${charIndex}`}
+                  className="inline-block font-normal"
+                  variants={letterAnimation}
+                  whileHover={{
+                    color: "#f59e0b",
+                    y: -5,
+                    transition: {
+                      type: "spring",
+                      stiffness: 500
+                    }
+                  }}
+                >
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              ))}
+            </span>
+
+          </motion.div>
           </motion.h1>
 
           {/* Description with Typewriter Effect */}
