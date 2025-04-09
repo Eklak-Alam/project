@@ -170,7 +170,7 @@ export default function LandingPage() {
 
           {/* Main Title with Character-by-Character Animation */}
           <motion.h1
-          className="text-[1.6rem] md:text-[3.3rem] lg:text-7xl text-white leading-tight tracking-tight mb-4"
+          className="text-[2rem] md:text-[2.1rem] lg:text-[3rem] font-bold max-w-5xl text-white leading-tight tracking-tight mb-4"
         >
           {/* Line 1 */}
           <motion.div
@@ -182,7 +182,7 @@ export default function LandingPage() {
               delayChildren: 0 * 0.2
             }}
           >
-            {"Revenue-Generating Outbound".split("").map((char, charIndex) => (
+            {"We Build You a System That Books Calls With".split("").map((char, charIndex) => (
               <motion.span
                 key={`line1-${charIndex}`}
                 className="inline-block"
@@ -212,7 +212,7 @@ export default function LandingPage() {
             }}
           >
             {/* "Systems, " stays normal */}
-            {"Systems, ".split("").map((char, charIndex) => (
+            {"Ready-To-Buy Clients, ".split("").map((char, charIndex) => (
               <motion.span
                 key={`line2a-${charIndex}`}
                 className="inline-block"
@@ -235,7 +235,7 @@ export default function LandingPage() {
               className="text-[#e63946] font-bold"
               style={{ fontFamily: "'Dancing Script', cursive" }}
             >
-              {"Done For You".split("").map((char, charIndex) => (
+              {"While You Sleep.".split("").map((char, charIndex) => (
                 <motion.span
                   key={`line2b-${charIndex}`}
                   className="inline-block font-normal"
@@ -259,7 +259,7 @@ export default function LandingPage() {
 
           {/* Description with Typewriter Effect */}
           <motion.div
-            className="mt-10 text-sm md:text-2xl text-gray-400 max-w-2xl mx-auto"
+            className="mt-10 text-sm md:text-lg text-gray-400 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 0.8 }}
@@ -281,7 +281,7 @@ export default function LandingPage() {
                 transition: { duration: 0.5 }
               }}
             >
-              We are a leading digital agency with global reach & services
+              AI-powered, ad-driven, and human-refined — our done-for-you outbound system turns ad spend into sales calls like clockwork.
             </motion.p>
           </motion.div>
 
@@ -298,14 +298,14 @@ export default function LandingPage() {
             }}
           >
             <motion.p 
-              className="text-sm text-gray-500 mb-6 relative inline-block"
+              className="text-[0.8rem] text-gray-500 mb-6 relative inline-block"
               whileHover={{
                 scale: 1.05,
                 color: "#f59e0b",
                 transition: { duration: 0.3 }
               }}
             >
-              Trusted by startups, creatives, and suits alike
+              Trusted by Law firms, HVAC, Ecom and Startups.....
               <motion.span 
                 className="absolute -bottom-1 left-0 w-full h-0.5 bg-amber-400/30"
                 initial={{ scaleX: 0 }}

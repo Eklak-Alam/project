@@ -34,12 +34,18 @@ export default function Testimonials() {
             <span className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-red-500/10 blur-xl rounded-full" />
             <span className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-red-500/5 rounded-full" />
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="text-white">Turning Cold Leads into </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-red-500">Revenue</span>
+          <h2 className="text-[1.4rem] md:text-5xl font-bold mb-4">
+            <div className="whitespace-nowrap">
+              <span className="text-white">Turning cold leads into </span>
+              <span className="text-amber-400 italic">Revenue</span>
+            </div>
+            <div className="mt-1 md:mt-3 text-gray-300 font-medium">
+              <span className="text-white">:real stories with </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-red-400">Blix Media</span>
+            </div>
           </h2>
-          <p className="text-sm md:text-base text-gray-400 max-w-2xl mx-auto">
-            Real stories from businesses that transformed their growth through our targeted strategies
+          <p className="text-[0.6rem] md:text-base text-gray-400 max-w-2xl mx-auto">
+            Discover how companies shifted from hoping from results to experiencing <br /> predictable, steady  growth through Ai Automation System
           </p>
         </div>
 
@@ -60,28 +66,31 @@ export default function Testimonials() {
 const testimonials = [
   {
     quote:
-      "Working with B2BWizards for 4-5 months doubled my client base with steady, quality leads—highly satisfied and recommend them!",
-    name: "Peter Komorowski",
-    title: "Founder | Email Crew",
-    image: "https://framerusercontent.com/images/2Us2pTWuedJJCXyPIihHKe0HC0.jpeg",
+      "I was honestly skeptical at first — we’ve tried agencies before, and they just threw a bunch of Facebook ads at us. Sanskar and his co-founder actually built a full system for us: lead capture, follow-up, automations... all of it. We’ve been booking more trial sessions in the last month than we did all of last quarter. These guys just get it.",
+    name: "Mike R",
+    title: "Owner @ IronCore Fitness (Gym/Fitness Studio)",
   },
   {
-    quote: "After trying multiple appointment-setting companies, B2B Wizards was the only one that exceeded my expectations.",
-    name: "Mike Coon",
-    title: "VP of Ops | Outsource Demand Gen",
-    image: "https://framerusercontent.com/images/JT4ypkg7yQy1m25LEwNK5MqhNGA.webp?scale-down-to=1024",
+    quote: "Our brand was doing decent numbers but we hit a ceiling. Blix Media helped us scale without breaking what was already working. Their email & ad strategies literally doubled our ROAS in under 30 days. But more than that — they communicated everything, kept us in the loop, and gave us clarity like never before.",
+    name: "Jessica L.",
+    title: "Founder @ WildAura Skincare (eCommerce)",
   },
   {
-    quote: "After eight years with various agencies, B2B Wizards stands out for delivering top-quality leads and seamless, adaptive teamwork.",
-    name: "Clinton Jiggetts",
-    title: "Founder | Best Fit Digital",
-    image: "https://framerusercontent.com/images/6dziZLqrrP2nA6OdSPK4pJuIVRc.webp?scale-down-to=512",
+    quote: "We were getting maybe 3-4 leads a week, mostly referrals. Blix Media came in, set up our outbound + paid campaigns, and now we're averaging 25-30 qualified leads a week. No fluff, no nonsense. Just results. Honestly, best decision I’ve made this year.",
+    name: "Chris D.",
+    title: "Co-Owner @ ArcticAir Pros (HVAC)",
   },
   {
     quote:
-      "The strategies at B2B Wizards transformed our agency—over $100K generated, including a $30K client, with ongoing successful campaigns.",
-    name: "Ashish Pandey",
-    title: "Co-founder | Growth Magnet Studio",
-    image: "https://framerusercontent.com/images/ufbP1OsT7U761JmQAlS86vJ1skw.jpg?scale-down-to=1024",
+      "What stood out was how deep they went into my offer and niche. It wasn’t just ads — it was positioning, copy, funnel, follow-up… everything. It felt like they were part of my team. My calendar’s been full, and I’m scaling my offer now — wouldn’t have been possible without them.",
+    name: "Natasha P.",
+    title: "Online Coach @ LevelUp Performance ",
+  },
+  
+  {
+    quote:
+      "We were running ads already, but the backend was messy. Blix came in, cleaned up our CRM, built a new funnel, and plugged in AI follow-ups. Everything just clicked. We hit our first 6-figure month within 8 weeks of working together. Absolute pros.",
+    name: "Ankit S.",
+    title: "Co-founder @ Aura Interiors ",
   },
 ];

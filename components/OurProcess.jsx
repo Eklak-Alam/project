@@ -5,23 +5,23 @@ import { FaUsers, FaPencilAlt, FaGlobe, FaChartLine } from "react-icons/fa";
 
 const steps = [
   {
-    title: "Discovery",
-    description: "We analyze your business needs, target audience, and market position to create a tailored strategy.",
+    title: "Onboarding Call",
+    description: "We dive deep into your business to understand what drives you and what’s holding you back. We’ll discuss your goals, your audience, and your pain points to craft a custom game plan.",
     icon: <FaUsers className="text-amber-500" />,
   },
   {
-    title: "Development",
-    description: "Our team builds customized solutions with cutting-edge technology for maximum impact.",
+    title: "Strategy and Setup",
+    description: "Within 7 days, we’ll develop a personalized system, according to your goals, create the ultimate framework, and optimize every detail to ensure a high level of success.",
     icon: <FaPencilAlt className="text-amber-500" />,
   },
   {
-    title: "Design",
-    description: "Crafting visually stunning interfaces that engage users and reflect your brand identity.",
+    title: "System Goes Live",
+    description: "Once we launch our system, you’ll start seeing results within days. Qualified leads will begin flowing into your pipeline, and we’ll continuously refine the system to keep the momentum going.",
     icon: <FaGlobe className="text-amber-500" />,
   },
   {
-    title: "Launch",
-    description: "Seamless deployment with continuous monitoring and optimization for peak performance.",
+    title: "Improve and Scale",
+    description: "We don’t just build a generic system for you. Our team analyzes the data, tests new approaches, and keeps tweaking until we squeeze every bit of ROI out of your campaign.",
     icon: <FaChartLine className="text-amber-500" />,
   },
 ];
@@ -101,10 +101,14 @@ export default function OurProcess() {
             Where <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-red-500">Strategy</span> Meets <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-red-500">Innovation</span>
           </motion.h2>
           <motion.p
-            className="mt-3 text-base md:text-lg text-gray-400 max-w-2xl mx-auto"
+            className="mt-3 text-gray-400 mx-auto max-w-2xl"
             variants={itemVariants}
+            style={{
+              fontSize: "clamp(1rem, 3vw, 1.5rem)",
+              lineHeight: "clamp(1.2, 3.5vw, 1.6)"
+            }}
           >
-            Proven methodology for digital transformation
+            Proven methodology for Scale & Growth
           </motion.p>
         </motion.div>
 
@@ -130,24 +134,31 @@ export default function OurProcess() {
               {/* Icon with enhanced glow */}
               <motion.div
                 className="w-12 h-12 flex items-center justify-center rounded-xl mb-4 bg-gradient-to-br from-gray-800 to-gray-900 group-hover:from-amber-500/20 group-hover:to-amber-600/20 transition-all duration-300"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 0 15px rgba(245, 158, 11, 0.3)"
+                }}
+                transition={{ 
+                  duration: 0.3,
+                  ease: "easeOut"
+                }}
               >
                 <motion.div
-                  animate={{
-                    scale: [1, 1.1, 1],
-                    rotateY: [0, 180, 360],
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 5 // subtle tilt on hover
                   }}
                   transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    repeatType: "loop"
+                    duration: 0.2,
+                    type: "spring",
+                    stiffness: 300
                   }}
-                  className="text-2xl"
+                  className="text-2xl text-amber-500/80 group-hover:text-amber-400 transition-colors duration-200"
                 >
                   {step.icon}
                 </motion.div>
               </motion.div>
-              
+   
               {/* Content */}
               <h3 className="text-lg md:text-xl font-semibold text-white mb-3 group-hover:text-amber-400 transition-colors">
                 {step.title}

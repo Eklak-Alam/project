@@ -45,7 +45,7 @@ export const SubFooter = () => {
             className="max-w-3xl"
           >
             <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
-            Transform your <span className="text-red-600">business</span>
+            Transform your business <span className="text-red-600">Now!</span>
               <div className="relative inline-block">
                 <span className="relative">
                   <span className="absolute left-0 top-1/2 h-0.5 w-full transform -translate-y-1/2"></span>

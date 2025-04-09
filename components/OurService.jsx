@@ -73,7 +73,7 @@ export const OurServices = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-sm md:text-base text-gray-400 max-w-2xl mx-auto"
           >
-            Comprehensive digital solutions tailored to your needs
+            Custom Built AI Automation System for client Aquisition (24 * 7)
           </motion.p>
         </motion.div>
 

@@ -4,10 +4,10 @@ import { motion, useInView, useAnimation } from 'framer-motion';
 
 const NumberOfPeopleUse = () => {
   const stats = [
-    { number: 254, suffix: "M+", label: "Successful Projects" },
-    { number: 13, suffix: "Y", label: "Years in business" },
-    { number: 25, suffix: "+", label: "Team Members" },
-    { number: 34, suffix: "M", label: "Award winning" }
+    { number: 25, suffix: "", label: "Successful Projects" },
+    { number: 2, suffix: "Y+", label: "Years in business" },
+    { number: 7, suffix: "+", label: "Team Members" },
+    { number: 13, suffix: "M+", label: "Award winning" }
   ];
 
   const ref = useRef(null);
@@ -47,7 +47,7 @@ const NumberOfPeopleUse = () => {
   };
 
   return (
-    <section className="relative w-full py-20 overflow-hidden bg-gradient-to-bl from-black via-black to-red-900/10">
+    <section className="relative w-full py-24 overflow-hidden bg-gradient-to-bl from-black via-black to-red-900/10">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-amber-500 to-transparent transform -rotate-3" />
@@ -55,23 +55,36 @@ const NumberOfPeopleUse = () => {
       </div>
 
       <div className="container mx-auto px-4 relative" ref={ref}>
-        {/* Description Text */}
-        <div className="max-w-2xl mx-auto mb-16 text-center">
-          <motion.p 
+        {/* Headings Section */}
+        <div className="max-w-3xl mx-auto mb-20 text-center">
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             animate={controls}
             variants={{
               visible: { opacity: 1, y: 0 }
             }}
             transition={{ duration: 0.6 }}
-            className="text-lg md:text-xl text-gray-300 leading-relaxed"
+            className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-400 to-red-500 bg-clip-text text-transparent"
           >
-            We ground our work in concepts, strategize thoughtfully, and execute creatively, crafting brands, designing websites, and delivering outstanding digital experiences.
+            Get your first client this week
+          </motion.h2>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={controls}
+            variants={{
+              visible: { opacity: 1, y: 0 }
+            }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto"
+          >
+            <span className="font-semibold text-white">1 week to get started</span>.{' '}
+            <span className="font-semibold text-amber-400">4 days</span> to get your first client on average
           </motion.p>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto relative">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto relative">
           {/* Scribble Effect - Top */}
           <motion.div
             initial={{ pathLength: 0, opacity: 0 }}
@@ -109,12 +122,12 @@ const NumberOfPeopleUse = () => {
                 visible: { opacity: 1, y: 0 }
               }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center p-4"
+              className="text-center py-6 rounded-xl transition-all duration-300"
             >
-              <h3 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-500 to-red-500 bg-clip-text text-transparent mb-2">
+              <h3 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-amber-500 to-red-500 bg-clip-text text-transparent mb-3">
                 <AnimatedCounter value={stat.number} suffix={stat.suffix} />
               </h3>
-              <p className="text-sm md:text-base text-gray-400">{stat.label}</p>
+              <p className="text-sm md:text-base text-gray-400 font-medium">{stat.label}</p>
             </motion.div>
           ))}
 

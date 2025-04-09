@@ -7,27 +7,24 @@ const FAQs = () => {
   const faqs = [
     {
       question: "What services does Blix Media offer?",
-      answer: "Blix Media offers a comprehensive range of digital services including web development, mobile app development, UI/UX design, custom software development, digital marketing, and branding & strategy services."
+      answer: "We build and manage done-for-you outbound systems that drive leads and revenue. This includes: Paid Ads (Google, Meta, TikTok, YouTube) AI appointment-setting infrastructure CRM setup (GoHighLevel included) Lead tracking, nurturing, and automation Daily reporting & Slack support You just show up to the booked calls."
     },
     {
-      question: "How long does a typical project take to complete?",
-      answer: "Project timelines vary depending on the scope and complexity. A basic website might take 4-6 weeks, while a comprehensive web application or mobile app can take 3-6 months. During our initial consultation, we'll provide you with a detailed timeline based on your specific requirements."
+      question: "How long does it take to start getting results?",
+      answer: "Most clients see qualified leads and booked appointments in the first 7–14 days after launch. Our full system setup takes 3–5 business days, depending on niche and ad approvals."
     },
     {
-      question: "Do you provide ongoing support after the project is completed?",
-      answer: "Yes, we offer various maintenance and support packages to ensure your digital products continue to perform optimally. These include regular updates, security monitoring, performance optimization, and content updates."
+      question: "Do you provide support after launch?",
+      answer: "Yes. We offer end-to-end ongoing support via Slack — this includes reporting, optimization, creative refreshes, and any adjustments you need. You're not left hanging."
     },
     {
-      question: "How do you approach the design process?",
-      answer: "Our design process begins with understanding your business goals, target audience, and industry. We create wireframes and prototypes, gather feedback, and refine our designs until we achieve the perfect balance of aesthetics and functionality that aligns with your brand identity."
+      question: "What platforms/tools do you use?",
+      answer: "We use a mix of tools like GoHighLevel, Instantly, Twilio, Zapier, Meta Ads Manager, Google Ads, and custom AI agents. But don't worry — you don’t have to touch any of that. We build the full backend for you."
     },
     {
-      question: "What technologies do you use for development?",
-      answer: "We use the latest technologies and frameworks suitable for your project requirements. These may include React, Angular, or Vue.js for front-end; Node.js, Python, or PHP for back-end; React Native or Flutter for mobile apps; and various CMS platforms like WordPress or Shopify when appropriate."
-    },
-    {
-      question: "Can you help with existing projects or only new ones?",
-      answer: "We're equipped to help with both new projects and existing ones that need improvements, updates, or complete overhauls. Our team can analyze your current digital assets and recommend the best approach to achieve your goals."
+      question: "Can you work with businesses that already run ads?",
+      answer: "Absolutely. If you’re already advertising or booking calls, we can optimize and plug in our backend systems to increase efficiency, reduce cost per lead, and automate your follow-ups."
+      
     }
   ];
 

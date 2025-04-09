@@ -87,17 +87,6 @@ export const InfiniteMovingCards = ({
 
                   {/* Author info with enhanced hover effects */}
                   <div className="flex items-center gap-4">
-                    <div className="relative">
-                      {/* Image container with glow effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-amber-500 rounded-full opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500" />
-                      <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-red-500/20 group-hover:ring-amber-500/50 transition-all duration-500">
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
-                        />
-                      </div>
-                    </div>
                     <div>
                       <h4 className="text-sm font-semibold text-white group-hover:text-amber-400 transition-colors duration-300">
                         {item.name}
