@@ -4,7 +4,7 @@ import { motion, useInView, useAnimation } from 'framer-motion';
 
 const NumberOfPeopleUse = () => {
   const stats = [
-    { number: 25, suffix: "", label: "Successful Projects" },
+    { number: 25, suffix: "+", label: "Successful Projects" },
     { number: 2, suffix: "Y+", label: "Years in business" },
     { number: 7, suffix: "+", label: "Team Members" },
     { number: 13, suffix: "M+", label: "Revenue Generated" }

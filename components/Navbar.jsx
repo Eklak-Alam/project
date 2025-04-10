@@ -2,18 +2,19 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { FaArrowRight } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState("home"); // Using href values for consistency
+  const [activeLink, setActiveLink] = useState("home");
 
   const links = [
     { name: "Home", href: "home" },
     { name: "Process", href: "process" },
     { name: "Services", href: "services" },
-    { name: "Testimonials", href: "testimonials" }, // Made consistent case
+    { name: "Testimonials", href: "testimonials" },
     { name: "FAQs", href: "faq" },
   ];
 
@@ -31,20 +32,17 @@ const Navbar = () => {
   }, []);  
 
   const handleLinkClick = useCallback((href) => {
-    setIsOpen(false); // First close the mobile menu
+    setIsOpen(false);
     setTimeout(() => {
-      scrollToSection(href); // Then scroll after menu has closed
+      scrollToSection(href);
       setActiveLink(href);
-    }, 300); // Delay enough for menu to animate closed (match exit duration)
+    }, 300);
   }, [scrollToSection]);
   
-  
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
       
-      // Update active link based on scroll position
       const sections = document.querySelectorAll("section[id], div[id]");
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
@@ -55,9 +53,7 @@ const Navbar = () => {
       });
     };
     
-    // Set initial state
     handleScroll();
-    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -149,7 +145,26 @@ const Navbar = () => {
               </div>
             </motion.button>
           ))}
-          <ScheduleButton onClick={() => handleLinkClick("contact")} />
+          
+          {/* New Schedule Button - Integrated in Navbar */}
+          <motion.button
+            className="cursor-pointer relative overflow-hidden px-6 py-3 text-sm font-mono tracking-wide rounded-full border border-neutral-800 text-white bg-transparent group"
+            onClick={() => window.open("https://calendly.com/wolfwisemedia/letsmakesomemoney", "_blank")}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="relative z-10 flex items-center">
+              <span>Book a Strategy Call Now!</span>
+              <span className="ml-2 transition-all duration-300 transform group-hover:translate-x-1">
+                <FaArrowRight size={16} />
+              </span>
+            </span>
+            
+            {/* Hover effect layers */}
+            <span className="absolute inset-0 overflow-hidden">
+              <span className="absolute top-0 left-0 h-full w-0 bg-red-800 transition-all duration-300 group-hover:w-full"></span>
+            </span>
+          </motion.button>
         </div>
         
         {/* Mobile Menu Button */}
@@ -193,7 +208,7 @@ const Navbar = () => {
                 }
               }}
             >
-              <div className="flex flex-col items-center space-y-4 p-6">
+              <div className="flex flex-col items-center space-y-4 p-6 cursor-pointer">
                 {links.map((link) => (
                   <motion.button
                     key={link.href}
@@ -231,10 +246,25 @@ const Navbar = () => {
                   variants={itemVariants}
                   className="w-full px-4 py-2"
                 >
-                  <ScheduleButton 
-                    className="w-full justify-center"
-                    onClick={() => handleLinkClick("/home")}
-                  />
+                  <button
+                    className="relative overflow-hidden px-6 py-3 text-sm font-mono tracking-wide rounded-full border border-neutral-800 text-white bg-transparent group w-full"
+                    onClick={() => window.open("https://calendly.com/wolfwisemedia/letsmakesomemoney", "_blank")}
+                  >
+                    <span className="relative z-10 flex items-center justify-center">
+                      <span>Book a Strategy Call Now!</span>
+                      <span className="ml-2 transition-all duration-300 transform group-hover:translate-x-1">
+                        →
+                      </span>
+                    </span>
+                    
+                    {/* Hover effect layers */}
+                    <span className="absolute inset-0 overflow-hidden">
+                      <span className="absolute top-0 left-0 h-full w-0 bg-red-800 transition-all duration-300 group-hover:w-full"></span>
+                      <span className="absolute top-0 left-0 h-full w-full">
+                        <span className="absolute top-1/2 left-full -translate-y-1/2 w-0 h-0.5 bg-white transition-all duration-500 group-hover:left-0 group-hover:w-full"></span>
+                      </span>
+                    </span>
+                  </button>
                 </motion.div>
               </div>
             </motion.div>
@@ -242,49 +272,6 @@ const Navbar = () => {
         </AnimatePresence>
       </div>
     </motion.nav>
-  );
-};
-
-const ScheduleButton = ({ className = "", onClick }) => {
-  return (
-    <motion.button
-      onClick={onClick}
-      className={`
-        relative group overflow-hidden inline-flex items-center justify-center
-        px-6 py-3 rounded-full border text-sm font-semibold transition-colors
-        bg-[#111] border-[#222] text-white hover:text-white
-        ${className}
-      `}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.97 }}
-    >
-      {/* Background fade effect */}
-      <motion.div
-        className="absolute inset-0 bg-[#1a1a1a] rounded-full z-0"
-        initial={{ opacity: 0 }}
-        whileHover={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
-      />
-
-      {/* Button Content */}
-      <span className="relative z-10 flex items-center gap-2">
-        <motion.span
-          initial={{ x: 0 }}
-          whileHover={{ x: 2 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          Schedule a Call
-        </motion.span>
-
-        <motion.div
-          initial={{ x: -5, opacity: 0 }}
-          whileHover={{ x: 0, opacity: 1 }}
-          transition={{ type: "tween", duration: 0.3 }}
-        >
-          <ArrowRight size={16} />
-        </motion.div>
-      </span>
-    </motion.button>
   );
 };
 
