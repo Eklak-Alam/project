@@ -72,12 +72,12 @@ export const InfiniteMovingCards = ({
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="relative h-full overflow-hidden rounded-xl bg-gradient-to-bl from-red-900/5 via-black to-black border border-red-500/10 p-8 transition-all duration-500 group-hover:border-amber-500/50 group-hover:shadow-[0_0_30px_-5px_rgba(245,158,11,0.3)] backdrop-blur-sm">
+              <div className="relative h-full overflow-hidden rounded-xl bg-gradient-to-bl from-[#c8102e]/5 via-black to-black border border-[#c8102e]/10 p-8 transition-all duration-500 group-hover:border-[#ff2d62]/50 group-hover:shadow-[0_0_30px_-5px_rgba(200,16,46,0.3)] backdrop-blur-sm">
                 {/* Animated gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-amber-500/10 to-red-500/0 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#c8102e]/0 via-[#ff2d62]/10 to-[#c8102e]/0 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
                 
                 {/* Quote mark decoration */}
-                <div className="absolute top-4 right-4 text-6xl font-serif text-red-500/10 group-hover:text-amber-500/20 transition-colors duration-500">"</div>
+                <div className="absolute top-4 right-4 text-6xl font-serif text-[#c8102e]/10 group-hover:text-[#ff2d62]/20 transition-colors duration-500">"</div>
                 
                 <div className="relative flex flex-col h-full z-10">
                   {/* Quote text */}
@@ -88,10 +88,10 @@ export const InfiniteMovingCards = ({
                   {/* Author info with enhanced hover effects */}
                   <div className="flex items-center gap-4">
                     <div>
-                      <h4 className="text-sm font-semibold text-white group-hover:text-amber-400 transition-colors duration-300">
+                      <h4 className="text-sm font-semibold text-white group-hover:text-[#ff2d62] transition-colors duration-300">
                         {item.name}
                       </h4>
-                      <p className="text-xs text-gray-500 group-hover:text-amber-500/70 transition-colors duration-300">
+                      <p className="text-xs text-gray-500 group-hover:text-[#ff2d62]/70 transition-colors duration-300">
                         {item.title}
                       </p>
                     </div>
@@ -99,10 +99,10 @@ export const InfiniteMovingCards = ({
 
                   {/* Animated border lines */}
                   <div className="absolute bottom-0 left-0 w-full h-[1px]">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-x-[-100%] group-hover:translate-x-0" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#ff2d62] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-x-[-100%] group-hover:translate-x-0" />
                   </div>
                   <div className="absolute top-0 right-0 h-full w-[1px]">
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-[-100%] group-hover:translate-y-0" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#c8102e] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-[-100%] group-hover:translate-y-0" />
                   </div>
                 </div>
               </div>

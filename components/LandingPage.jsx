@@ -12,7 +12,6 @@ const companyLogos = [
   "/twilio.png",
 ];
 
-
 // Memoized animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -102,7 +101,7 @@ export default function LandingPage() {
   return (
     <div 
       id="home" 
-      className="flex flex-col overflow-hidden bg-gradient-to-bl from-red-900 via-black to-black"
+      className="flex flex-col overflow-hidden bg-gradient-to-br from-[#c8102e] via-black to-black"
       ref={containerRef}
     >
       {/* Hero Section */}
@@ -110,22 +109,22 @@ export default function LandingPage() {
         {/* Background Gradient */}
         <div className="absolute inset-0 z-0" />
         <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-[200%] h-full opacity-30">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute h-px bg-white"
-              style={{
-                left: '0',
-                top: `${i * 8}%`,
-                width: '100%',
-                animation: `moveLines ${20 + i * 5}s linear infinite`,
-                transform: `rotate(${-35 + i * 2}deg)`,
-              }}
-            />
-          ))}
+          <div className="absolute w-[200%] h-full opacity-30">
+            {[...Array(20)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute h-px bg-white"
+                style={{
+                  left: '0',
+                  top: `${i * 8}%`,
+                  width: '100%',
+                  animation: `moveLines ${20 + i * 5}s linear infinite`,
+                  transform: `rotate(${-35 + i * 2}deg)`,
+                }}
+              />
+            ))}
+          </div>
         </div>
-      </div>
         
         {/* Enhanced Content with Superior Animations */}
         <motion.div 
@@ -155,7 +154,7 @@ export default function LandingPage() {
               WELCOME TO BLIX MEDIA
             </motion.span>
             <motion.div 
-              className="absolute bottom-0 left-0 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent"
+              className="absolute bottom-0 left-0 h-px bg-gradient-to-r from-transparent via-[#c8102e] to-transparent"
               initial={{ width: 0 }}
               animate={{ 
                 width: "100%",
@@ -170,94 +169,64 @@ export default function LandingPage() {
 
           {/* Main Title with Character-by-Character Animation */}
           <motion.h1
-          className="text-[2rem] md:text-[2.1rem] lg:text-[3rem] font-bold max-w-5xl text-white leading-tight tracking-tight mb-4"
-        >
-          {/* Line 1 */}
-          <motion.div
-            className="overflow-hidden"
-            initial="hidden"
-            animate="visible"
-            transition={{
-              staggerChildren: 0.03,
-              delayChildren: 0 * 0.2
-            }}
+            className="text-[2rem] md:text-[2.1rem] lg:text-[3rem] font-bold max-w-5xl text-white leading-tight tracking-tight mb-4"
           >
-            {"We Build You a System That Books Calls With".split("").map((char, charIndex) => (
-              <motion.span
-                key={`line1-${charIndex}`}
-                className="inline-block"
-                variants={letterAnimation}
-                whileHover={{
-                  color: "red",
-                  y: -5,
-                  transition: {
-                    type: "spring",
-                    stiffness: 500
-                  }
-                }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
-          </motion.div>
-
-          {/* Line 2 */}
-          <motion.div
-            className="overflow-hidden"
-            initial="hidden"
-            animate="visible"
-            transition={{
-              staggerChildren: 0.03,
-              delayChildren: 1 * 0.2
-            }}
-          >
-            {/* "Systems, " stays normal */}
-            {"Ready-To-Buy Clients, ".split("").map((char, charIndex) => (
-              <motion.span
-                key={`line2a-${charIndex}`}
-                className="inline-block"
-                variants={letterAnimation}
-                whileHover={{
-                  color: "#f59e0b",
-                  y: -5,
-                  transition: {
-                    type: "spring",
-                    stiffness: 500
-                  }
-                }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
-
-            {/* "Done For You" with different style */}
-            <span
-              className="text-[#e63946] font-bold"
-              style={{ fontFamily: "'Dancing Script', cursive" }}
+            {/* Line 1 */}
+            <motion.div
+              className="overflow-hidden"
+              initial="hidden"
+              animate="visible"
+              transition={{
+                staggerChildren: 0.03,
+                delayChildren: 0 * 0.2
+              }}
             >
-              {"While You Sleep.".split("").map((char, charIndex) => (
+              {"We Build You a System That Books Calls With".split("").map((char, charIndex) => (
                 <motion.span
-                  key={`line2b-${charIndex}`}
-                  className="inline-block font-normal"
+                  key={`line1-${charIndex}`}
+                  className="inline-block"
                   variants={letterAnimation}
-                  whileHover={{
-                    color: "#f59e0b",
-                    y: -5,
-                    transition: {
-                      type: "spring",
-                      stiffness: 500
-                    }
-                  }}
                 >
                   {char === " " ? "\u00A0" : char}
                 </motion.span>
               ))}
-            </span>
+            </motion.div>
 
-          </motion.div>
+            {/* Line 2 */}
+            <motion.div
+              className="overflow-hidden"
+              initial="hidden"
+              animate="visible"
+              transition={{
+                staggerChildren: 0.03,
+                delayChildren: 1 * 0.2
+              }}
+            >
+              {"Ready-To-Buy Clients, ".split("").map((char, charIndex) => (
+                <motion.span
+                  key={`line2a-${charIndex}`}
+                  className="inline-block"
+                  variants={letterAnimation}
+                >
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              ))}
+
+              <span className="text-[#c8102e] font-bold italic" style={{ fontFamily: "'Dancing Script', cursive" }}>
+                {"While You Sleep.".split("").map((char, charIndex) => (
+                  <motion.span
+                    key={`line2b-${charIndex}`}
+                    className="inline-block"
+                    variants={letterAnimation}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </motion.span>
+                ))}
+              </span>
+            </motion.div>
           </motion.h1>
 
-          {/* Description with Typewriter Effect */}
+          {/* Description */}
           <motion.div
             className="mt-10 text-sm md:text-lg text-gray-400 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
@@ -298,16 +267,16 @@ export default function LandingPage() {
             }}
           >
             <motion.p 
-              className="text-[0.8rem] text-gray-500 mb-6 relative inline-block"
+              className="text-[0.9rem] text-gray-500 mb-6 relative inline-block"
               whileHover={{
                 scale: 1.05,
-                color: "#f59e0b",
+                color: "#c8102e",
                 transition: { duration: 0.3 }
               }}
             >
-              Trusted by Law firms, HVAC, Ecom and Startups.....
+              Trusted by Law firms, HVAC, Ecom and Startups.....
               <motion.span 
-                className="absolute -bottom-1 left-0 w-full h-0.5 bg-amber-400/30"
+                className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#c8102e]/30"
                 initial={{ scaleX: 0 }}
                 animate={{ 
                   scaleX: 1,
@@ -343,14 +312,16 @@ export default function LandingPage() {
             </div>
           </div>
           
-          {/* Enhanced Gradient edge effects */}
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-950 via-gray-950/90 to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-950 via-gray-950/90 to-transparent z-10 pointer-events-none" />
+          {/* Gradient edge effects in your brand colors */}
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black via-black/90 to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black via-black/90 to-transparent z-10 pointer-events-none" />
         </motion.div>
       </section>
 
-      {/* CSS Keyframes */}
+      {/* CSS Keyframes and Font Import */}
       <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        
         @keyframes scroll-left {
           0% { transform: translateX(0%); }
           100% { transform: translateX(-50%); }
@@ -362,6 +333,10 @@ export default function LandingPage() {
         }
         .hover\:animation-paused:hover {
           animation-play-state: paused;
+        }
+        @keyframes moveLines {
+          0% { transform: translateX(-50%) rotate(-35deg); }
+          100% { transform: translateX(0%) rotate(-35deg); }
         }
       `}</style>
     </div>

@@ -8,17 +8,17 @@ export default function Testimonials() {
     <div id="testimonials" className="min-h-[45rem] relative overflow-hidden"
       style={{
         background: `
-          radial-gradient(circle at 20% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
-          radial-gradient(circle at 80% 80%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 20% 20%, rgba(200, 16, 46, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 80% 80%, rgba(255, 45, 98, 0.1) 0%, transparent 50%),
           linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 1))
         `
       }}
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
-        <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/20 to-transparent" />
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-[#c8102e]/20 to-transparent" />
+        <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#ff2d62]/20 to-transparent" />
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-[#c8102e]/20 to-transparent" />
       </div>
 
       {/* Content container */}
@@ -26,22 +26,22 @@ export default function Testimonials() {
         {/* Header section */}
         <div className="text-center mb-12">
           <span className="text-xs md:text-sm font-medium tracking-widest inline-block mb-4 relative">
-            <span className="py-2 px-4 relative z-10 bg-gradient-to-r from-amber-500 to-red-500 text-transparent bg-clip-text">
+            <span className="py-2 px-4 relative z-10 bg-gradient-to-r from-[#c8102e] to-[#ff2d62] text-transparent bg-clip-text">
               TESTIMONIALS
-              <span className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-red-500/10 blur-xl rounded-full" />
-              <span className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-white/50 rounded-full" />
+              <span className="absolute inset-0 bg-gradient-to-r from-[#c8102e]/10 to-[#ff2d62]/10 blur-xl rounded-full" />
+              <span className="absolute inset-0 bg-gradient-to-r from-[#c8102e]/5 to-white/50 rounded-full" />
             </span>
-            <span className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-red-500/10 blur-xl rounded-full" />
-            <span className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-red-500/5 rounded-full" />
+            <span className="absolute inset-0 bg-gradient-to-r from-[#c8102e]/10 to-[#ff2d62]/10 blur-xl rounded-full" />
+            <span className="absolute inset-0 bg-gradient-to-r from-[#c8102e]/5 to-[#ff2d62]/5 rounded-full" />
           </span>
           <h2 className="text-[1.4rem] md:text-5xl font-bold mb-4">
             <div className="whitespace-nowrap">
               <span className="text-white">Turning cold leads into </span>
-              <span className="text-amber-400 italic">Revenue</span>
+              <span className="text-[#ff2d62]" style={{ fontFamily: "'Dancing Script', cursive" }}>Revenue:</span>
             </div>
             <div className="mt-1 md:mt-3 text-gray-300 font-medium">
-              <span className="text-white">:real stories with </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-red-400">Blix Media</span>
+              <span className="text-white">real stories with </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c8102e] to-[#ff2d62]">Blix Media</span>
             </div>
           </h2>
           <p className="text-[0.6rem] md:text-base text-gray-400 max-w-2xl mx-auto">
@@ -66,7 +66,7 @@ export default function Testimonials() {
 const testimonials = [
   {
     quote:
-      "I was honestly skeptical at first — we’ve tried agencies before, and they just threw a bunch of Facebook ads at us. Sanskar and his co-founder actually built a full system for us: lead capture, follow-up, automations... all of it. We’ve been booking more trial sessions in the last month than we did all of last quarter. These guys just get it.",
+      "I was honestly skeptical at first — we've tried agencies before, and they just threw a bunch of Facebook ads at us. Sanskar and his co-founder actually built a full system for us: lead capture, follow-up, automations... all of it. We've been booking more trial sessions in the last month than we did all of last quarter. These guys just get it.",
     name: "Mike R",
     title: "Owner @ IronCore Fitness (Gym/Fitness Studio)",
   },
@@ -76,13 +76,13 @@ const testimonials = [
     title: "Founder @ WildAura Skincare (eCommerce)",
   },
   {
-    quote: "We were getting maybe 3-4 leads a week, mostly referrals. Blix Media came in, set up our outbound + paid campaigns, and now we're averaging 25-30 qualified leads a week. No fluff, no nonsense. Just results. Honestly, best decision I’ve made this year.",
+    quote: "We were getting maybe 3-4 leads a week, mostly referrals. Blix Media came in, set up our outbound + paid campaigns, and now we're averaging 25-30 qualified leads a week. No fluff, no nonsense. Just results. Honestly, best decision I've made this year.",
     name: "Chris D.",
     title: "Co-Owner @ ArcticAir Pros (HVAC)",
   },
   {
     quote:
-      "What stood out was how deep they went into my offer and niche. It wasn’t just ads — it was positioning, copy, funnel, follow-up… everything. It felt like they were part of my team. My calendar’s been full, and I’m scaling my offer now — wouldn’t have been possible without them.",
+      "What stood out was how deep they went into my offer and niche. It wasn't just ads — it was positioning, copy, funnel, follow-up… everything. It felt like they were part of my team. My calendar's been full, and I'm scaling my offer now — wouldn't have been possible without them.",
     name: "Natasha P.",
     title: "Online Coach @ LevelUp Performance ",
   },

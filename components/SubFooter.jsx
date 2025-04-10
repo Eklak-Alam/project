@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export const SubFooter = () => {
   return (
-    <div className="relative w-full overflow-hidden rounded-t-[2.5rem] bg-gradient-to-bl from-red-900 via-black to-black">
+    <div className="relative w-full overflow-hidden rounded-t-[2.5rem] bg-gradient-to-bl from-[#c8102e] via-black to-black">
       {/* Wave Animation */}
       <div className="absolute right-0 top-0 h-full w-1/2 overflow-hidden">
         <motion.div
@@ -29,7 +29,7 @@ export const SubFooter = () => {
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute h-full w-full rounded-[42%] blur-2xl"
+            className="absolute h-full w-full rounded-[42%] opacity-20 blur-2xl"
           />
         </motion.div>
       </div>
@@ -37,7 +37,7 @@ export const SubFooter = () => {
       {/* Content Container */}
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="relative z-10">
-          {/* Text Content with Strike-through Effect */}
+          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -45,10 +45,10 @@ export const SubFooter = () => {
             className="max-w-3xl"
           >
             <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
-            Transform your business <span className="text-red-600">Now!</span>
+              Transform your business <span className="text-[#ff2d62]">Now!</span>
               <div className="relative inline-block">
                 <span className="relative">
-                  <span className="absolute left-0 top-1/2 h-0.5 w-full transform -translate-y-1/2"></span>
+                  <span className="absolute left-0 top-1/2 h-0.5 w-full bg-gradient-to-r from-[#c8102e] to-[#ff2d62] transform -translate-y-1/2"></span>
                 </span>
               </div>
             </h2>
@@ -61,9 +61,13 @@ export const SubFooter = () => {
               className="mt-8"
             >
               <motion.button
-                whileHover={{ scale: 1.05, backgroundColor: "#000" }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  backgroundColor: "#000",
+                  boxShadow: "0 0 20px rgba(255, 45, 98, 0.5)"
+                }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative inline-flex items-center justify-center rounded-full bg-black px-8 py-3 text-lg font-medium text-white transition-all duration-300 hover:bg-opacity-90 border border-white hover:shadow-xl"
+                className="group relative inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#c8102e] to-[#ff2d62] px-8 py-3 text-lg font-medium text-white transition-all duration-300 hover:bg-opacity-90 border border-transparent hover:border-white hover:shadow-xl"
               >
                 Let's Discuss a project
                 <svg
@@ -86,15 +90,24 @@ export const SubFooter = () => {
         </div>
       </div>
 
-      <style jsx global>{`
-        @keyframes wave {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-        .font-handwriting {
-          font-family: 'Comic Sans MS', cursive;
-        }
-      `}</style>
+      {/* Bottom decorative elements */}
+      <div className="absolute bottom-0 left-0 w-full h-2 opacity-50">
+        <svg width="100%" height="100%">
+          <path 
+            d="M0,10 Q250,0 500,10 T1000,10" 
+            stroke="url(#footerGradient)" 
+            strokeWidth="2" 
+            fill="none"
+          />
+          <defs>
+            <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#c8102e" />
+              <stop offset="50%" stopColor="#ff2d62" />
+              <stop offset="100%" stopColor="#c8102e" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
     </div>
   );
 };
