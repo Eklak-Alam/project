@@ -169,62 +169,62 @@ export default function LandingPage() {
 
           {/* Main Title with Character-by-Character Animation */}
           <motion.h1
-            className="text-[2rem] md:text-[2.1rem] lg:text-[3rem] font-bold max-w-5xl text-white leading-tight tracking-tight mb-4"
-          >
-            {/* Line 1 */}
-            <motion.div
-              className="overflow-hidden"
-              initial="hidden"
-              animate="visible"
-              transition={{
-                staggerChildren: 0.03,
-                delayChildren: 0 * 0.2
-              }}
+              className="text-[2rem] md:text-[2.1rem] lg:text-[3rem] font-bold max-w-5xl text-white leading-tight tracking-tight mb-4"
             >
-              {"We Build You a System That Books Calls With".split("").map((char, charIndex) => (
-                <motion.span
-                  key={`line1-${charIndex}`}
-                  className="inline-block"
-                  variants={letterAnimation}
-                >
-                  {char === " " ? "\u00A0" : char}
-                </motion.span>
-              ))}
-            </motion.div>
-
-            {/* Line 2 */}
-            <motion.div
-              className="overflow-hidden"
-              initial="hidden"
-              animate="visible"
-              transition={{
-                staggerChildren: 0.03,
-                delayChildren: 1 * 0.2
-              }}
-            >
-              {"Ready-To-Buy Clients, ".split("").map((char, charIndex) => (
-                <motion.span
-                  key={`line2a-${charIndex}`}
-                  className="inline-block"
-                  variants={letterAnimation}
-                >
-                  {char === " " ? "\u00A0" : char}
-                </motion.span>
-              ))}
-
-              <span className="font-bold italic" style={{ fontFamily: "'Dancing Script', cursive" }}>
-                {"While You Sleep.".split("").map((char, charIndex) => (
+              {/* Line 1 */}
+              <motion.div
+                className="overflow-hidden"
+                initial="hidden"
+                animate="visible"
+                transition={{
+                  staggerChildren: 0.03,
+                  delayChildren: 0 * 0.2
+                }}
+              >
+                {"We Build You a System That Books Calls With".split("").map((char, charIndex) => (
                   <motion.span
-                    key={`line2b-${charIndex}`}
-                    className="inline-block bg-gradient-to-r from-[#b40623] to-[#a90404e2] bg-clip-text text-transparent"
+                    key={`line1-${charIndex}`}
+                    className="inline-block"
                     variants={letterAnimation}
                   >
                     {char === " " ? "\u00A0" : char}
                   </motion.span>
                 ))}
-              </span>
-            </motion.div>
-          </motion.h1>
+              </motion.div>
+
+              {/* Line 2 */}
+              <motion.div
+                className="overflow-hidden"
+                initial="hidden"
+                animate="visible"
+                transition={{
+                  staggerChildren: 0.03,
+                  delayChildren: 1 * 0.2
+                }}
+              >
+                {"Ready-To-Buy Clients, ".split("").map((char, charIndex) => (
+                  <motion.span
+                    key={`line2a-${charIndex}`}
+                    className="inline-block"
+                    variants={letterAnimation}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </motion.span>
+                ))}
+
+                <span className="font-bold italic" style={{fontFamily: "'Playfair Display', serif"}}>
+                  {"While You Sleep.".split("").map((char, charIndex) => (
+                    <motion.span
+                      key={`line2b-${charIndex}`}
+                      className="inline-block bg-gradient-to-r from-[#b40623] to-[#a90404e2] bg-clip-text text-transparent"
+                      variants={letterAnimation}
+                    >
+                      {char === " " ? "\u00A0" : char}
+                    </motion.span>
+                  ))}
+                </span>
+              </motion.div>
+            </motion.h1>
 
           {/* Description */}
           <motion.div
