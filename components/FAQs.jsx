@@ -66,7 +66,7 @@ const FAQs = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl md:text-5xl font-bold text-white mb-4"
           >
-            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c8102e] to-[#ff2d62]">Questions</span>
+            Frequently Asked <span className="bg-gradient-to-r from-[#b40623] to-[#a90404e2] bg-clip-text text-transparent">Questions</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}

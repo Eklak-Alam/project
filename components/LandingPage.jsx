@@ -212,11 +212,11 @@ export default function LandingPage() {
                 </motion.span>
               ))}
 
-              <span className="text-[#c8102e] font-bold italic" style={{ fontFamily: "'Dancing Script', cursive" }}>
+              <span className="font-bold italic" style={{ fontFamily: "'Dancing Script', cursive" }}>
                 {"While You Sleep.".split("").map((char, charIndex) => (
                   <motion.span
                     key={`line2b-${charIndex}`}
-                    className="inline-block"
+                    className="inline-block bg-gradient-to-r from-[#b40623] to-[#a90404e2] bg-clip-text text-transparent"
                     variants={letterAnimation}
                   >
                     {char === " " ? "\u00A0" : char}

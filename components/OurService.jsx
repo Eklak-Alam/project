@@ -65,7 +65,7 @@ export const OurServices = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl md:text-5xl font-bold text-white mb-6"
           >
-            What can we do for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c8102e] to-[#ff2d62]">you?</span>
+            What can we do for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b40623] to-[#a90404e2]">you?</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -151,7 +151,8 @@ export const OurServices = () => {
           <motion.button
             whileHover={{ scale: 1.05, backgroundColor: "rgba(200, 16, 46, 0.2)" }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-3 px-8 py-4 rounded-full bg-black/50 backdrop-blur-sm border border-[#c8102e]/20 hover:border-[#c8102e]/40 text-white font-medium transition-all duration-300"
+            className="cursor-pointer flex items-center gap-3 px-8 py-4 rounded-full bg-black/50 backdrop-blur-sm border border-[#c8102e]/20 hover:border-[#c8102e]/40 text-white font-medium transition-all duration-300"
+            onClick={() => window.open("https://calendly.com/wolfwisemedia/letsmakesomemoney", "_blank")}
           >
             <FaCalendarAlt className="text-[#c8102e]" />
             Book an Appointment

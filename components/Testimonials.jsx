@@ -37,11 +37,11 @@ export default function Testimonials() {
           <h2 className="text-[1.4rem] md:text-5xl font-bold mb-4">
             <div className="whitespace-nowrap">
               <span className="text-white">Turning cold leads into </span>
-              <span className="text-[#ff2d62]" style={{ fontFamily: "'Dancing Script', cursive" }}>Revenue:</span>
+              <span className="bg-gradient-to-r from-[#b40623] to-[#a90404e2] bg-clip-text text-transparent" style={{ fontFamily: "'Dancing Script', cursive" }}>Revenue:</span>
             </div>
             <div className="mt-1 md:mt-3 text-gray-300 font-medium">
               <span className="text-white">real stories with </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c8102e] to-[#ff2d62]">Blix Media</span>
+              <span className="bg-gradient-to-r from-[#b40623] to-[#a90404e2] bg-clip-text text-transparent">Blix Media</span>
             </div>
           </h2>
           <p className="text-[0.6rem] md:text-base text-gray-400 max-w-2xl mx-auto">

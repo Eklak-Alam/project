@@ -66,7 +66,7 @@ const NumberOfPeopleUse = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-5xl font-bold mb-4 bg-white bg-clip-text text-transparent"
           >
-            Get your first client <span className='text-[#ff2d62]'>this week</span>
+            Get your first client <span className='bg-gradient-to-r from-[#b40623] to-[#a90404e2] bg-clip-text text-transparent'>this week</span>
           </motion.h2>
           
           <motion.p 
@@ -79,7 +79,7 @@ const NumberOfPeopleUse = () => {
             className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto"
           >
             <span className="font-semibold text-white">1 week to get started</span>.{' '}
-            <span className="font-semibold text-[#ff2d62]">4 days</span> to get your first client on average
+            <span className="font-semibold bg-gradient-to-r from-[#b40623] to-[#a90404e2] bg-clip-text text-transparent">4 days</span> to get your first client on average
           </motion.p>
         </div>
 

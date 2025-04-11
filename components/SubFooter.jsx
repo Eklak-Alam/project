@@ -45,7 +45,7 @@ export const SubFooter = () => {
             className="max-w-3xl"
           >
             <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
-              Transform your business <span className="text-[#ff2d62]">Now!</span>
+              Transform your business <span className="bg-gradient-to-r from-[#b40623] to-[#a90404e2] bg-clip-text text-transparent">Now!</span>
               <div className="relative inline-block">
                 <span className="relative">
                   <span className="absolute left-0 top-1/2 h-0.5 w-full bg-gradient-to-r from-[#c8102e] to-[#ff2d62] transform -translate-y-1/2"></span>
@@ -67,7 +67,8 @@ export const SubFooter = () => {
                   boxShadow: "0 0 20px rgba(255, 45, 98, 0.5)"
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#c8102e] to-[#ff2d62] px-8 py-3 text-lg font-medium text-white transition-all duration-300 hover:bg-opacity-90 border border-transparent hover:border-white hover:shadow-xl"
+                onClick={() => window.open("https://calendly.com/wolfwisemedia/letsmakesomemoney", "_blank")}
+                className="cursor-pointer group relative inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#c8102e] to-[#ff2d62] px-8 py-3 text-lg font-medium text-white transition-all duration-300 hover:bg-opacity-90 border border-transparent hover:border-white hover:shadow-xl"
               >
                 Let's Discuss a project
                 <svg

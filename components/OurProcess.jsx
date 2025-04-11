@@ -93,7 +93,7 @@ export default function OurProcess() {
                   className="text-xs md:text-sm font-medium tracking-widest inline-block relative"
                 >
                   <span className="py-2 px-4 relative z-10 bg-gradient-to-r from-[#c8102e] to-[#ff2d62] text-transparent bg-clip-text">
-                    SERVICES
+                    Process
                     {/* Decorative glows */}
                     <span className="absolute inset-0 bg-gradient-to-r from-[#c8102e]/10 to-[#ff2d62]/10 blur-xl rounded-full" />
                     <span className="absolute inset-0 bg-gradient-to-r from-[#c8102e]/5 to-white/50 rounded-full" />
@@ -111,7 +111,7 @@ export default function OurProcess() {
             className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6"
             variants={itemVariants}
           >
-            Where <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d0d25] to-[#c31736]">Strategy</span> Meets <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b40623] to-[#e83a5a]">Innovation</span>
+            Where <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b40623] to-[#a90404e2]">Strategy</span> Meets <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b40623] to-[#a90404e2]">Innovation</span>
           </motion.h2>
 
           {/* Subtitle Text */}

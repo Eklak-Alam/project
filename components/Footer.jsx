@@ -3,6 +3,7 @@
 import React from "react";
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const Footer = () => {
   const socialLinks = [
@@ -30,7 +31,7 @@ export const Footer = () => {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#b40623] to-[#a90404e2] bg-clip-text text-transparent">
             Connect Us
             </h3>
             
@@ -45,18 +46,6 @@ export const Footer = () => {
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
                   <a href="mailto:contact@b2bwizards.com" className="text-white hover:text-red-500 transition-colors">contact@b2bwizards.com</a>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="mt-1 w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-gray-400 text-sm">Phone</p>
-                  <a href="tel:+15551234567" className="text-white hover:text-red-500 transition-colors">+1 (555) 123-4567</a>
                 </div>
               </div>
               
@@ -82,7 +71,7 @@ export const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#b40623] to-[#a90404e2] bg-clip-text text-transparent">
               Follow Us
             </h3>
             
@@ -129,15 +118,12 @@ export const Footer = () => {
             © {new Date().getFullYear()} All Rights Reserved
           </p>
           <div className="flex gap-4">
-            <a href="/terms" className="text-gray-400 hover:text-amber-500 transition-colors">
+            <Link href="/terms" target="_blank" className="text-gray-400 hover:text-red-500 transition-colors">
               Terms
-            </a>
-            <a href="/privacy" className="text-gray-400 hover:text-amber-500 transition-colors">
+            </Link>
+            <Link href="/privacy" target="_blank" className="text-gray-400 hover:text-red-500 transition-colors">
               Privacy
-            </a>
-            <a href="/cookies" className="text-gray-400 hover:text-amber-500 transition-colors">
-              Cookies
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>
